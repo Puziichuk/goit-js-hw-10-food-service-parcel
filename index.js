@@ -17,10 +17,9 @@ menuContainer.insertAdjacentHTML("beforeend", menuCards(menu));
 
   function showSwitch(e){
       if (e.target.checked){
-        document.body.classList.add('dark-theme');
+      document.body.classList.add('dark-theme');
       document.body.classList.remove('light-theme');
       localStorage.setItem('theme', Theme.DARK);
-      
       } else  {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
@@ -36,6 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
           if (background) {
             document.body.className += background;
           }
-          Switch.checked= true;
+          Switch.checked=true;
 });
 
