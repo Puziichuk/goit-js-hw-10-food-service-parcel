@@ -21,11 +21,12 @@ menuContainer.insertAdjacentHTML("beforeend", menuCards(menu));
       document.body.classList.add('dark-theme');
       document.body.classList.remove('light-theme');
       localStorage.setItem('theme', Theme.DARK);
-      localStorage.setItem('theme', true);
+      Switch.checked=true;
+      
       } else{
       document.body.classList.add('light-theme');
       document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', Theme.LIGHT);    
+      localStorage.setItem('theme', Theme.LIGHT);
 }
 
 };
