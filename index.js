@@ -10,7 +10,6 @@ menuContainer.insertAdjacentHTML("beforeend", menuCards(menu));
   const Switch = document.querySelector("#theme-switch-toggle");
   Switch.addEventListener('change',showSwitch);
 
-
   const Theme = {
     LIGHT: 'light-theme',
     DARK: 'dark-theme',
@@ -18,15 +17,15 @@ menuContainer.insertAdjacentHTML("beforeend", menuCards(menu));
 
   function showSwitch(e){
       if (e.target.checked){
-      document.body.classList.add('dark-theme');
+        document.body.classList.add('dark-theme');
       document.body.classList.remove('light-theme');
       localStorage.setItem('theme', Theme.DARK);
-      Switch.checked=true;
       
-      } else{
-      document.body.classList.add('light-theme');
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', Theme.LIGHT);
+      } else  {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', Theme.LIGHT);
+    
 }
 
 };
@@ -37,4 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
           if (background) {
             document.body.className += background;
           }
+          Switch.checked= true;
 });
+
