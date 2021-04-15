@@ -5,8 +5,6 @@ import menu from "./menu.json";
 const menuContainer = document.querySelector(".js-menu");
 
 menuContainer.insertAdjacentHTML("beforeend", menuCards(menu));
-
-
 //   const Switch = document.querySelector("#theme-switch-toggle");
 //   Switch.addEventListener('change',showSwitch);
 
