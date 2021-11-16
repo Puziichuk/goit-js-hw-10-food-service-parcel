@@ -8,25 +8,43 @@ const menuContainer = document.querySelector(".js-menu");
 
 menuContainer.insertAdjacentHTML("beforeend", menuCards(menu));
   const Switch = document.querySelector("#theme-switch-toggle");
-  Switch.addEventListener('change',showSwitch);
+  Switch.addEventListener('change',showSwitchTheme);
+
+
+
+    // document.getElementById("#theme-switch-toggle").checked = true;
+
+
+//   setSavedValue(Switch);
+
+//   function setSavedValue(e){
+//     if(localStorage.getItem('switchState') === null){
+//       e.checked = true;
+//       localStorage.setItem('switchState', 1);
+//     }else{
+//         e.checked = localStorage.getItem('soundState') == 1;
+//       }
+//   }n
+
+  
 
   const Theme = {
     LIGHT: 'light-theme',
     DARK: 'dark-theme',
   };
 
-  function showSwitch(e){
+function showSwitchTheme (e){
       if (e.target.checked){
       document.body.classList.add('dark-theme');
       document.body.classList.remove('light-theme');
       localStorage.setItem('theme', Theme.DARK);
+
       } else  {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
-        localStorage.setItem('theme', Theme.LIGHT);
-    
+        localStorage.setItem('theme', Theme.LIGHT);  
+       
 }
-
 };
 
 
@@ -35,6 +53,21 @@ document.addEventListener("DOMContentLoaded", function() {
           if (background) {
             document.body.className += background;
           }
-          Switch.checked=true;
+          Switch.checked = true;
 });
 
+
+
+// const currentTheme = localStorage.getItem("theme");
+// // If the current local storage item can be found
+// if (currentTheme) {
+//   // Set the body data-theme attribute to match the local storage item
+//   document.documentElement.setAttribute("theme", currentTheme);
+// // If the current theme is dark, check the theme toggle
+//   if (currentTheme === "light-theme") {
+//     document.getElementById("#theme-switch-toggle").checked = true;
+//   }if (currentTheme === "dark-theme") {
+//     document.getElementById("#theme-switch-toggle").checked = true;
+//   }
+// // }
+// }
